@@ -1,0 +1,92 @@
+
+@font-face {
+  font-family: "unifont";
+  src: url("fonts/unifont.otf") format("opentype");
+}
+
+/* Reset or normalize styles – soll scheinbar gut sein am Anfang?*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Allgemeines Design */
+body {
+  font-family: unifont;
+  line-height: 1.6;
+  color: #ffffff;
+    background-color: #00000000;
+}
+
+/* Navigation styles */
+nav {
+  color: #fff;
+  padding: 1em;
+}
+
+nav ul {
+  font-size: 1.5em;
+  list-style: none; /* Entfernt die Standard-Aufzählungszeichen */
+  display: flex; 
+  justify-content: flex-end;
+  padding: 0; /* Entfernt Standard-Padding */
+  margin: 0; /* Entfernt Standard-Margin */
+  
+}
+
+/*nur mein name wird links angezeigt*/
+nav ul li:first-child {
+  margin-right: auto; /* Schiebt das erste Element nach links */
+}
+
+nav ul li {
+  color: white;
+  margin:0 50px;
+  text-align: right; /* Zentriert den Text in den Listenelementen */
+  line-height: 2;
+  
+  }
+
+  nav ul li a {
+    padding: 0.5em 0.5em; /* Fügt Platz um den Text herum hinzu */
+    color: white; 
+    text-decoration: none; /* macht weg das es unterstrichen wird */
+  }
+  
+  /*boxen hinterm text beim hoovern*/
+  nav ul li a:hover {
+    padding: 0.5em 0.5em; /* Fügt Platz um den Text hinzu -> macht die grösse der Box */
+    background-color: rgba(255, 0, 255, 0.3);
+  }
+
+
+/* Header styles */
+header {
+  display: flex;
+  justify-content: center; /* Zentriert horizontal */
+  align-items: center; /* Zentriert vertikal */
+  height: 80vh; /* Höhe des Viewports */
+  padding: 0; /* Entfernt das Padding */
+  font-size: 3em;
+  text-align: center;
+}
+
+/*meine pinke hintergrund box*/
+.center-box {
+  width: 90%; /* Breite der Box */
+  height: 80%; /* Höhe der Box */
+  background-color: rgb(255, 0, 255, 0.3); /* Einfarbige Box (Pink) */
+  position: absolute; /* Absolute Positionierung */
+  top: 52%; /* Vertikale Mitte */
+  left: 50%; /* Horizontale Mitte */
+  transform: translate(-50%, -50%); /* Zentriert die Box */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Schatten für einen schönen Effekt */
+}
+
+canvas {
+    position: fixed; /* Fixes the canvas in place */
+    top: 0;
+    left: 0;
+    z-index: -2; /* Sends the canvas behind other content */
+  }
