@@ -161,10 +161,10 @@ canvas {
 
 .image-container {
   width: auto; 
-  height: 75%;
+  height: 70%;
   position: absolute;
   top: 52%;
-  left: 20%;
+  left: 24%;
   transform: translate(-50%, -50%);
   overflow: hidden;/* schneidet das bild auf die grösse des containers zu?*/
 }
@@ -182,15 +182,43 @@ canvas {
   background-color: rgb(255, 0, 255); 
   position: absolute; 
   top: 52%; 
-  left: 65%; 
+  left: 68%; 
   transform: translate(-50%, -50%);
   box-shadow: 0 4px 10px rgba(255, 0, 255, 0.5); 
+   
+}
+.info-box h2 {
+  color: white; 
+  text-align: left;  
+  font-size: 2em;
+  margin-bottom: 10px;
+  margin-left: 15px;
 
-  color: white;
+}
+
+.info-box h3 {
+  color: white; 
+  text-align: left;   
+  font-size: 1.5em;
+  margin-left: 15px;
+  margin-top: 10px;
+  
+}
+
+.info-box ul {
+  color: white; 
+  text-align: left;   
+  list-style: none;
+  margin-left: 15px;
+  line-height: 1.2;
+  margin-bottom: 10px;
 }
 
 .info-box p {
-  padding: 10px; 
+  color: white; 
   text-align: left;  
-  line-height: 0.1; 
+  line-height: 1.2; 
+  word-wrap: break-word;
+  white-space: normal;
+  margin-left: 15px;
 }
