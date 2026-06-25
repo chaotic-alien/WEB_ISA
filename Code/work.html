@@ -25,7 +25,42 @@
     
     </header>
 
-        <div class="center-box"></div> <!--das soll der pinke durchsichtige hintergrund werden-->
+        <div class="center-box"> </div> <!--das soll der pinke durchsichtige hintergrund werden-->
+
+        <div class="text-box">
+            <p id="info-text">  </p>
+        </div> <!--das soll der pinke hintergrund für den info text werden-->
+
+        <div class="images">
+             <img id="info-image" src="#" alt="Platzhalter: Kein Bild ausgewählt">
+        </div> <!--irgendwie werden hier die Bilder gezeigt :)-->
+        
+
+        <div class="projects">
+            <li><a href="#" onclick="changeProject('The invisible LANscape', 'images/LANscape/Highres_01.jpg')">Projekt 1</a></li>
+            <li><a href="#" onclick="changeProject('This is not about Pizza', 'images/Pizza/Pizza1.jpg')">Projekt 2</a></li>
+            <li><a href="#" onclick="changeProject('Voices on the Streets', 'images/Stimmen/Stimmen1.jpeg')">Projekt 3</a></li>
+            <li><a href="#" onclick="changeProject('Coming Soon', 'images/eheaha.jpg')">Projekt 4</a></li>
+            <li><a href="#" onclick="changeProject('Coming Soon', 'images/eheaha.jpg')">Projekt 5</a></li>
+        </div>
+
+
+        <script>
+            function changeProject(text, imageSrc) {
+                // Ändere den Infotext
+                const infoText = document.getElementById('info-text');
+                if (infoText) {
+                    infoText.innerText = text;
+                }
+        
+                // Ändere das Bild
+                const infoImage = document.getElementById('info-image');
+                if (infoImage) {
+                    infoImage.src = imageSrc;
+                }
+            }
+        </script>
+
     
     <script src="sketch.js"></script>
     

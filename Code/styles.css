@@ -61,6 +61,7 @@ nav ul li {
   }
 
 
+
 /* Header styles */
 header {
   display: flex;
@@ -81,12 +82,79 @@ header {
   top: 52%; /* Vertikale Mitte */
   left: 50%; /* Horizontale Mitte */
   transform: translate(-50%, -50%); /* Zentriert die Box */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Schatten für einen schönen Effekt */
+  box-shadow: 0 4px 10px rgba(255, 0, 255, 0.2); /* Optional: Schatten für einen schönen Effekt */
+  z-index: -2; /* Stellt sicher, dass die Box hinter dem Text liegt */
+}
+
+/*meine pinke hintergrund box 2?*/
+.text-box {
+  width: 30%;
+  height: 20%;
+  background-color: rgb(255, 0, 255); 
+  position: absolute; 
+  top: 85%; 
+  left: 82%; 
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 10px rgba(255, 0, 255, 0.5); 
+
+  color: white;
+  text-align: center;
 }
 
 canvas {
     position: fixed; /* Fixes the canvas in place */
     top: 0;
     left: 0;
-    z-index: -2; /* Sends the canvas behind other content */
+    z-index: -3; /* Sends the canvas behind other content */
   }
+
+  .projects {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    transform: translate(130%, -100%);
+    height: fit-content;
+    width: fit-content;
+    z-index: 1;
+  }
+  
+  .projects li {
+    margin-bottom: 50px; /* Abstand zwischen den Elementen */
+    padding: 20px; 
+    background-color: rgba(255, 0, 255); /* Pinker Hintergrund */
+  }
+.projects li a {
+  text-decoration: none; /* Entfernt die Unterstreichung */
+  color: inherit; /* Übernimmt die Textfarbe des übergeordneten Elements */
+}
+
+.projects li:hover {
+  color: rgb(0, 105, 7);
+  background-color: rgba(0, 255, 0,0.7); /* Ändert die Hintergrundfarbe beim Hover */
+}
+
+.images {
+  display: flex;
+  /*background-color: rgba(255,0,255,0.5);*/
+  width: 60%; /* Breite der Box */
+  height: 70%; /* Höhe der Box */
+  position: absolute; /* Absolute Positionierung */
+  top: 52%; /* Vertikale Mitte */
+  left: 55%; /* Horizontale Mitte */
+  transform: translate(-50%, -50%); /* Zentriert die Box */
+  z-index: -1;
+  justify-content: center;
+  align-items: center;
+}
+
+.images img {
+  width: auto; /* Passt das Bild an die Breite des Containers an */
+  height: 100%; /* Beibehaltung des Seitenverhältnisses */
+  box-shadow: 0 4px 10px rgba(255, 0, 255, 0.2); /* Optional: Schatten für einen schönen Effekt */
+
+}
+
+.images img[src="#"] {
+  display: none; /* Blendet das Bild aus, wenn der src-Wert "#" ist */
+}
